@@ -5,13 +5,13 @@
 class Mm < Formula
   desc "Mattermost CLI for humans and agents"
   homepage "https://github.com/ayusavin/mattermost-cli"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ayusavin/mattermost-cli/releases/download/v0.2.0/mm_0.2.0_darwin_amd64.tar.gz"
-      sha256 "3eeb4fd0ba26ea342e59138c69fc3459238a1d204fcb140cd41603cfbf515a5c"
+      url "https://github.com/ayusavin/mattermost-cli/releases/download/v0.2.1/mm_0.2.1_darwin_amd64.tar.gz"
+      sha256 "24ec18dda745251e47c8146c7bf932ba35b8af64323bc8e68be664a28e335454"
 
       define_method(:install) do
         bin.install "mm"
@@ -19,8 +19,8 @@ class Mm < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ayusavin/mattermost-cli/releases/download/v0.2.0/mm_0.2.0_darwin_arm64.tar.gz"
-      sha256 "0364019b0055f39983f7ef424ad8fcc293a11b814c904b61504cb6c327563339"
+      url "https://github.com/ayusavin/mattermost-cli/releases/download/v0.2.1/mm_0.2.1_darwin_arm64.tar.gz"
+      sha256 "a1f46295ebc66faf97dbb5e562463a44b0feea355219b01ed9a6dad7dbd786ad"
 
       define_method(:install) do
         bin.install "mm"
@@ -31,16 +31,16 @@ class Mm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ayusavin/mattermost-cli/releases/download/v0.2.0/mm_0.2.0_linux_amd64.tar.gz"
-      sha256 "290e0d33b01ade325d2e552e6ddba6c780fc84c6cc1f4eb5f052aa4fa3b8b288"
+      url "https://github.com/ayusavin/mattermost-cli/releases/download/v0.2.1/mm_0.2.1_linux_amd64.tar.gz"
+      sha256 "19058eb650bdb324769ef30fa37fd084c1d975c88fb37a25e91b9a1de593948e"
       define_method(:install) do
         bin.install "mm"
         generate_completions_from_executable(bin/"mm", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ayusavin/mattermost-cli/releases/download/v0.2.0/mm_0.2.0_linux_arm64.tar.gz"
-      sha256 "0fb71819539c5ea535477fd837353cc8c0ec8fdc05c2b128208dbf58ad781526"
+      url "https://github.com/ayusavin/mattermost-cli/releases/download/v0.2.1/mm_0.2.1_linux_arm64.tar.gz"
+      sha256 "9794de32fb47a69a8d36469a657942aebc5ff1e2bc2cece41ec6d1a60fd97231"
       define_method(:install) do
         bin.install "mm"
         generate_completions_from_executable(bin/"mm", "completion")
